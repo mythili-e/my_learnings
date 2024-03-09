@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div>
+           
+            <span id="username">mythili</span>
+        </div>
+        <button type="button" onclick="innerhtml()">innerhtml</button>
+        <button type="button" onclick="innertext()">innertext</button>
+        
+
+       
+    </body>
+        <script>
+           
+            function innerhtml()
+            {
+                var username =document.getElementById("username").innerHTML;
+            // var x= document.getElementById("username").innerhtml;
+            // console.log(username);
+            document.getElementById("username").innerhtml=username;
+                
+            }
+
+           function innertext()
+           {
+            var username =document.getElementById("username").innertext;
+            console.log(username);
+            document.getElementById("username").innertext="username";
+           }
+        </script>
+    </html>

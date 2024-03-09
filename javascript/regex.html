@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .errorMsg{
+        border: 2px solid red;
+    }
+    .successMsg{
+        border: 2px solid green;
+    }
+</style>
+<body>
+    <label>Email</label>
+    <input type="text" id="email"/></br>
+    <span id="errormessage" style="color: red;">Please enter correct email address</span></br>
+    <button type="button" onclick="validateemail()"> validate</button>
+</body>
+</html>
+<script>
+    var x = document.getElementById("errormessage");
+    x.style.display = "none";
+    function validateemail(){
+        let email = document.getElementById('email').value;
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+        {
+            x.style.display = "none";
+            document.getElementById('email').removeAttribute("class", "errorMsg");
+            document.getElementById('email').setAttribute("class", "successMsg");
+        }
+        else{
+            x.style.display = "block";
+            document.getElementById('email').removeAttribute("class", "successMsg");
+            document.getElementById('email').setAttribute("class", "errorMsg");
+        }
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id ="demo2"></p>
+        <p id ="demo3"></p>
+        <p id ="demo4"></p>        
+
+    </body>
+    <script>
+        const d=new Date();
+        document.getElementById("demo").innerHTML=d;
+
+        const dat = new Date("October 13, 2014 11:13:00");
+        document.getElementById("demo1").innerHTML=dat;
+
+
+        // A month higher than 11, add the overflow to the next year
+        const date=new Date(2023,11,13);
+        document.getElementById("demo2").innerHTML=date;
+
+        const dd=new Date(2023,11,13);
+        document.getElementById("demo3").innerHTML=dd.toString();
+
+
+        // const ddd = new Date("2023-11-13");
+        const ddd = new Date();
+        ddd.setDate("15");
+        document.getElementById("demo4").innerHTML=ddd;
+
+        
+
+
+
+
+
+       
+    </script>
+</html>

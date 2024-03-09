@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p id="demo">Please visit Microsoft and Google. Microsoft is a software company.</p>
+        <p id="demo1"></p>
+        <p id="output"></p>
+        <button type="button" onclick="tryReplace()">Replace</button>
+        <button type="button" onclick="tryReplaceAll()">Replace All</button>
+        <button type="button" onclick="slice()">Slice</button>
+        <button type="button" onclick="substr()">substr</button>
+        <button type="button" onclick="toUpperCase()">toUpperCase</button>
+        <button type="button" onclick="toLowerCase()">toLowerCase</button>
+        <button type="button" onclick="concat()">conCat</button>
+        <button type="button" onclick="stringtrim()">stringtrim</button>
+        <button type="button" onclick="split()">split</button>
+    
+        
+
+
+    </body>
+    <script>
+        function slice()
+        {
+            var text="apple, mango";
+            var part=text.slice(7,11);
+            document.getElementById("demo").innerHTML=part;
+
+        }
+        function substr()
+        {            
+        let str = "Apple, Banana, Kiwi";
+        let part = str.substr(7, 4);
+        document.getElementById("demo").innerHTML=part;
+        }
+        
+        let text = document.getElementById("demo").innerHTML;
+
+        function tryReplace()
+        {
+        let newText = text.replace("Microsoft", "W3Schools");
+        document.getElementById("output").innerHTML=newText;
+        }
+        function tryReplaceAll()
+        {
+        let newText = text.replaceAll("Microsoft", "W3Schools");
+        document.getElementById("output").innerHTML=newText;
+        }
+        function toUpperCase()
+        {
+        let text = document.getElementById("demo").innerHTML;
+        document.getElementById("output").innerHTML=text.toUpperCase();
+        }
+        function toLowerCase()
+        {
+        let text = document.getElementById("demo").innerHTML;
+        document.getElementById("output").innerHTML=text.toLowerCase();
+        }
+        function concat()
+        {
+            var text1="Good";
+            var text2="morning";
+            var text3=text1.concat("",text2);
+            document.getElementById("demo1").innerHTML=text3;
+        }
+        function stringtrim()
+        {
+            var text4= "    Hello all   ";
+            var text5= text4.trim();
+            document.getElementById("demo1").innerHTML="Length text4 = " + text4.length + "<br>Length text5 = " + text5.length;
+        }
+        function split()
+        {
+            // var text6="javascript";
+            const myArr=text.split(" ");
+
+            text = "";
+            for (var i = 0; i < myArr.length; i++)
+            {
+            text += myArr[i] + "<br>"
+            }
+            document.getElementById("demo1").innerHTML= text;
+
+        }
+        
+
+        
+
+
+
+
+
+    </script>
+</html>

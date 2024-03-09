@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+    </head>
+    <body>
+        <form>
+        <label>password</label>
+        <input type ="password" id="psw" />
+        <button type="button" onclick="validatePassword()">button</button>
+    </form>
+    </body>
+</html>
+<script>
+    // let password=document.getElementById("psw").value;
+
+
+function passwordValidate(pwd){
+    var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    return re.test(pwd)
+}
+
+function validatePassword() {
+try
+{
+    let pwd = document.getElementById("psw").value;
+    let result = passwordValidate(pwd);
+
+    if(!result)
+    {
+        alert("password incorrect");
+        // throw "password incorrect;"
+    }
+} 
+catch(ex)
+{
+    // document.getElementById("errormessage").innerHTML=ex;
+    alert(ex);
+}
+
+   
+    // let errors = [];
+    // switch(pwd)
+    // {
+    //     case (pwd.length < 8):
+    //         errors.push("Your password must be at least 8 characters");
+    //         break;
+
+    // }
+    // if (errors.length > 0) {
+    //     alert(errors.join("\n"));
+    //     return false;
+    // }
+    // return true;
+
+
+
+    // if (pwd.length < 8) {
+    //     errors.push("Your password must be at least 8 characters"); 
+    // }
+    // if (pwd.search(/[a-z]/i) < 0) {
+    //     errors.push("Your password must contain at least one letter.");
+    // }
+    // if (pwd.search(/[0-9]/) < 0) {
+    //     errors.push("Your password must contain at least one digit."); 
+    // }
+    // if (errors.length > 0) {
+    //     alert(errors.join("\n"));
+    //     return false;
+    // }
+    // else{
+    //     alert("Valid password");
+    // }
+    // return true;
+
+
+    // switch case
+
+    // const ppassword = "/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/";
+    // switch(p)
+    // {
+    //     case p.search("/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/")<0:
+    //     //fail
+    //     alert("Error");
+    //     break;
+    //     default:
+    //         alert("Success");
+        
+    // }
+    }
+</script>

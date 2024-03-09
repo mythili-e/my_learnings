@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <form>
+               <span>Shirt = </span> <input type="text" id="shirt"><br>
+               <span>Trouser =</span> <input type="text" id="trouser"><br>
+                <span>Total = </span> <span id="total"></span><br>
+
+                <button type="button" onclick="getTotal()">Add</button>
+            </form>
+            <p id ="demo"></p>
+        </body>
+    </head>
+</html>
+<script>
+    let s = 10;
+    var r = 8;
+    test();
+    function test() {
+        let s = 12;
+        r = 10;
+
+    }
+
+
+
+    var x = 5;
+    var y = 10;
+    var z;
+    function getTotal() {
+
+    alert("add button clicked");        
+       x=document.getElementById('shirt').value;
+        y=document.getElementById('trouser').value;
+        z=x+y;
+    }
+
+
+
+
+
+    // var x=5;
+    // var y=10;
+    // var z=x+y;
+    // document.getElementById('demo').innerHTML="The total value is: "+ z;
+    // console.log(z);
+
+</script>

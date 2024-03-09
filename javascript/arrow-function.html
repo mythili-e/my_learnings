@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Functions</h1>
+<h2>The Arrow Function</h2>
+
+<p>This example shows the syntax of an Arrow Function, and how to use it.</p>
+
+<p id="demo"></p>
+
+<script type="module">
+    import { name, age,emp } from "./sampleData.js";
+    console.log(emp.employees); -->
+<!-- <script>
+  //arrow function with single line operation
+// let myFunction = (a, b) => a * b;
+
+//   // arrow function with multi line operation
+// myFunction=(a,b)=> {
+// return a*b;
+// };
+
+// // normal function
+// function myFunction(a,b){
+// return a*b;
+// }
+// document.getElementById("demo").innerHTML = [name,age];
+// document.getElementById("demo").innerHTML =myFunction(); -->
+<!-- </script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body>
+    <p id="demo"></p>
+    <label>enter a value:</label>
+    <input type="text" id="input1"/>
+    <label>enter b value:</label>
+    <input type="text" id="input2" />
+    <button type="button" onclick="calculateme()">submit</button>
+
+</body>
+<script>
+    function calculateme()
+    {
+    let a = document.getElementById("input1").value;
+    let b = document.getElementById("input2").value;
+
+    let myFunction = (a, b) => a * b;
+    document.getElementById("demo").innerHTML =myFunction(a,b);
+    }
+    
+</script>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+    <div>
+        <label>User Name:</label>
+        <input type="textbox" id="username"/><br>
+        <span id="errorusername" style="color: red;">please enter only characters</span>
+    </div>
+
+    <div>
+        <label>Gender:</label>
+        <label>Male:</label>
+        <input type="radio" id="male" value="male" name="gender"/>
+        <label>Female:</label>
+        <input type="radio" id="female" value="female" name="gender"/><br>
+        <span id="errorgender" style="color: red;">please select gender</span>
+    </div>
+
+    <div>
+        <label>Status:</label>
+        <select id="status">
+            <option value="0">select</option>
+            <option value="1">Married</option>
+            <option value="2">Unmarried</option>
+        </select>
+        <span id="errorstatus" style="color: red;">please select status </span>
+    </div>    
+
+    <div>
+        <label>Address:</label>
+        <textarea id="address"></textarea><br>
+        <span id="erroraddress" style="color: red;">please enter address</span>
+    </div>
+
+    <div>
+        <button type="button" id="submit" onclick="validateForm()">Submit</button>
+    </div>    
+
+    </body>
+</html>
+<script>
+    // document.getElementById("errorusername").style.display="none";
+
+    let usernameerror= document.getElementById("errorusername");
+    usernameerror.style.display="none";
+
+    
+    let gendererror= document.getElementById("errorgender");
+    gendererror.style.display="none";
+
+    
+    let statuserror= document.getElementById("errorstatus");
+    statuserror.style.display="none";
+
+    
+    let addresserror= document.getElementById("erroraddress");
+    addresserror.style.display="none";
+
+    function validateForm(){
+        let username=document.getElementById("username").value;
+        let result=validateusername(username);
+        if(!result)
+        {
+            usernameerror.style.display="block";
+        }
+        else
+        {
+            usernameerror.style.display="none";  
+        }
+        
+        let gender=document.querySelector('input[name="gender"]:checked');
+        console.log(gender);
+        if(!gender)
+        {
+            gendererror.style.display="block";
+        }
+        else
+        {
+            gendererror.style.display="none";  
+        }
+
+        let status = document.getElementById("status");
+        let value = status.value;       
+        console.log(value);
+        if(value===0){
+            statuserror.style.display="block";
+        }
+        else{
+            statuserror.style.display="none"; 
+        }
+        let address = document.getElementById("address").value;
+        document.getElementById("address").focus();
+        if (address === ""){
+                addresserror.style.display="block";
+
+                //    alert("Enter the permanent address");
+                //    document.getElementById("address").focus();
+               }
+               else {
+                //    alert(document.getElementById("address").value);
+                addresserror.style.display="none";
+               }
+    }
+
+       
+    
+    function validateusername(username){
+        try{
+        let usernameregex=/^[a-zA-Z\-]+$/;
+        return usernameregex.test(username);
+        }catch(err){
+            alert(err);
+        }
+    }
+</script>

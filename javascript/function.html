@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="xname" id="xname"  onchange="calculate()"/>
+        <input type="text" name="yname" id="yname" onchange="calculate()"/><br>
+
+        <label>addition : <span id="addition"></span></label><br>
+        <label>subtraction : <sapn id="subtraction"></sapn></label><br>
+        <label>multiplication : <sapn id="multiplication"></sapn></label><br>
+        <label>division : <sapn id="division"></sapn></label><br>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+        <p id="x">thisb  </p>
+        <p id="y"></p>
+        
+    </body>
+    <script>
+        function calculate()
+        {
+            let x=document.getElementById('xname').value;
+           let y=document.getElementById('yname').value;
+           add(x,y);
+           subtract(x,y);   
+           multiply(x,y);   
+           division(x,y); 
+           let g= document.getElementById('x').innerHTML;
+           console.log(g);
+           document.getElementById('y').innerHTML=g;
+        }
+        function add(x,y)
+        {
+            let z=parseInt(x)+parseInt(y);
+            console.log(z);
+            document.getElementById('addition').innerHTML=z;
+        }
+        function subtract(x,y)
+        {
+            let z=parseInt(x)-parseInt(y);
+            console.log(z);
+            document.getElementById('subtraction').innerHTML=z;
+        }
+        function multiply(x,y)
+        {
+            let z=parseInt(x)*parseInt(y);
+            console.log(z);
+            document.getElementById('multiplication').innerHTML=z;
+        }
+        function division(x,y)
+        {
+            let z=parseInt(x)/parseInt(y);
+            console.log(z);
+            document.getElementById('division').innerHTML=z;
+        }
+    
+    //     function addition()
+    //     {
+    //        let x=document.getElementById('xname').value;
+    //        let y=document.getElementById('yname').value;
+    //        document.getElementById('result').innerHTML=parseInt(x)+parseInt(y);
+    //     }
+
+    //     function subraction(x,y=20)
+    //     {
+    //         let z=x-y;
+    //         console.log(z);
+    //         return z;
+    //     }
+    //     let result1= subraction(5);
+    //     function multification(x,y)
+    //     {
+    //         let z=x*y;
+    //         console.log(z);
+    //         return z;
+    //     }
+    //    let result= multification(8,8);
+    //    function reminder()
+    //    {      
+    //    let x=8;
+    //    let y=2;
+    //    let z=x%y;
+    //    console.log(z);
+    //    }
+    //    reminder();
+    //    function quotient(x,y=16)
+    //    {
+    //     let z=x/y;
+    //     console.log(z);
+    //    }
+    //    quotient(4);
+
+
+
+        
+
+    </script>
+</html>
